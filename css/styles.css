@@ -1,3 +1,16 @@
+  :root{
+    --white: #F6F7E4;
+    --light-grey: #DFE4DE;
+    --menu-color: #715D00;
+    --h1-color: #F9E994;
+    --green: #537D13;
+    --text-color: #483C08;
+    --bg-blue-gradient: linear-gradient(180deg,
+        #e1edf8 0%,
+        rgba(127, 179, 225, 0) 59.38%,
+        rgba(0, 0, 0, 0.25) 100%);
+    --bg-grey-gradient: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  }
   /* Reset styles */
   h1,
   h2,
@@ -44,9 +57,8 @@
 }
 /* header */
 .header {
-    background-image: url(../images/bg-hero.webp);
+    background-image: url(../images/background-img.webp);
 }
-
 .header-container {
     display: flex;
     justify-content: space-around;
