@@ -35,6 +35,33 @@
             </li>
           </ul>
         </nav>
+        <button type="button" data-menu-open class="menu-open">
+          <svg class="menu-icon">
+            <use href="./images/symbol-defs.svg#icon-mob-menu"></use>
+          </svg>
+        </button>
+        <div class="mob-menu is-hidden" data-menu>
+          <div>
+            <button type="button" data-menu-close class="menu-close-btn">
+              <svg class="menu-close">
+                <use href="./images/symbol-defs.svg#icon-x-mob-modal"></use>
+              </svg>
+            </button>
+            <nav class="header-nav-mob">
+              <ul class="header-nav-list-mob">
+                <li class="header-nav-item-mob">
+                  <a class="header-nav-link-mob" href="">ORDER</a>
+                </li>
+                <li class="header-nav-item-mob">
+                  <a class="header-nav-link-mob" href="">ABOUT</a>
+                </li>
+                <li class="header-nav-item-mob">
+                  <a class="header-nav-link-mob" href="">RESULTS</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -42,5 +69,6 @@
       <section class="container"></section>
       <section class="container"></section>
     </main>
+    <script src="./js/index.js" type="module"></script>
   </body>
 </html>
