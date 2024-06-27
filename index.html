@@ -86,7 +86,41 @@
               class="hero-cat-photo"
             />
             <div class="order-container">
-              <form action="" class="order-form"></form>
+              <form class="order-form" autocomplete="off">
+                <div class="upper-part-form">
+                  <h3 class="timer-title">TIME LEFT</h3>
+                  <p class="timer"></p>
+                  <div class="price">
+                    <p class="old-price">120uah</p>
+                    <p class="new-price">60uah</p>
+                  </div>
+                </div>
+                <div class="bottom-part-form">
+                  <input
+                    type="text"
+                    class="form-input"
+                    name="user-name"
+                    id="user-name"
+                    placeholder="Name"
+                    required
+                  />
+                  <input
+                    type="tel"
+                    class="form-input"
+                    name="user-phone"
+                    id="user-phone"
+                    placeholder="+38(0__)___-__-__"
+                    pattern="\+38\(0[0-9]{2}\)[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                    title="Формат: +38(0XX)XXX-XX-XX"
+                    required
+                  />
+                  <button type="submit" class="form-btn">ORDER</button>
+                </div>
+                <p class="data-title">
+                  Order date:
+                  <span class="form-data"></span>
+                </p>
+              </form>
             </div>
           </div>
         </div>
