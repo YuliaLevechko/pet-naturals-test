@@ -4,6 +4,8 @@
     --light-grey: #DFE4DE;
     --menu-color: #715D00;
     --h1-color: #F9E994;
+    --manufacturer-item: #F6E791;
+    --manufacturer-bg-text: #A1D33766;
     --line-price: #F6BE91;
     --green: #537D13;
     --order-bg-color: #A1D337;
@@ -19,6 +21,7 @@
         rgba(127, 179, 225, 0) 59.38%,
         rgba(0, 0, 0, 0.25) 100%);
     --bg-grey-gradient: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    --bg-green-gradient: linear-gradient(180deg, #F9E994 0%, #537D13 56%, #483C08 100%);
   }
   /* Reset styles */
   h1,
@@ -238,6 +241,10 @@
 }
 .hero-item:nth-last-child(2){
     margin-bottom: 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-wrap: nowrap;
 }
 .hero-item:last-child {
     margin-bottom: 0;
@@ -255,7 +262,6 @@
 .hero-cat-photo {
     width: 290px;
 }
-
 .order-form {
     width: 270px;
     display: flex;
@@ -366,6 +372,74 @@
     color: var(--data-color);
     text-shadow: 0px 4px 4px #00000040;
 }
+/* ---------------------------manufacturer section---------------------------- */
+.manufacturer {
+    background-image: url(../images/paws.webp);
+    background-size: contain;
+    /* background-position: center;
+    background-repeat: no-repeat; */
+    padding: 60px 0 61px;
+}
+.manufacturer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.manufacturer-title {
+    font-size: 24px;
+    line-height: 1.1;
+    text-align: center;
+    background: var(--bg-green-gradient);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.manufacturer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.manufacturer-item {
+    width: 305px;
+    background-color: var(--manufacturer-item);
+    box-shadow: 2px 4px 5px 0px #00000040;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0  15px 14px;
+    border-radius: 20px;
+}
+.manufacturer-photo-two {
+    padding-top: 25px;
+}
+.manufacturer-photo-three {
+    padding-top: 14px;
+}
+.manufacturer-text-block {
+    width: 275px;
+    height: 218px;
+    background-color: var(--manufacturer-bg-text);
+    border-radius: 20px;
+    padding: 21px 14px 23px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 19px;
+}
+.manufacturer-subtitle {
+    color: var(--order-btn);
+    text-shadow: 0px 2px 2px #00000040;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.1;
+    text-align: center;
+    text-wrap: nowrap;
+}
+.manufacturer-descr {
+    font-size: 18px;
+    line-height: 1.1;
+    text-align: center;
+}
 
 /* ------------------------------------MEDIA---------------------------------- */
 @media screen and (min-width: 320px) {
@@ -432,7 +506,15 @@
     .hero-cat-photo {
         width: 530px;
     }
-
+    .manufacturer-title {
+        font-size: 36px;
+    }
+    .manufacturer-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 45px;
+    }
 }
 
 @media screen and (min-width: 1140px) {
@@ -463,18 +545,28 @@
     .hero {
         padding-top: 156px;
     }
+    .hero-container {
+        padding: 0;
+    }
     .hero-title {
         font-size: 52px;
         width: 578px;
         line-height: 1.1;
+        display: flex;
+        flex-direction: column;
+        text-wrap: nowrap;
     }
     .hero-info-container {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-end;
+        position: relative;
+        width: 100%;
     }
     .hero-text-container {
         align-items: start;
         gap: 60px;
+        height: 439px;
+        justify-content: flex-end;
     }
     .hero-subtitle {
         text-align: left;
@@ -488,6 +580,33 @@
         width: 710px;
         z-index: 2;
         position: absolute;
+        top: 57%;
+        left: 52%;
+        transform: translate(-50%, -50%);
+    }
+    .hero-text-container,
+    .order-container {
+        flex: 1;
+    }
+    .order-container {
+        display: flex;
+        justify-content: end;
     }
 
+    .manufacturer{
+        padding: 100px 0 101px;
+        background-size: auto;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .manufacturer-container{
+        gap: 60px;
+    }
+    .manufacturer-title {
+        font-size: 52px;
+    }
+    .manufacturer-list {
+        flex-wrap: nowrap;
+        gap: 84px;
+    }
 }
