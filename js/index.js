@@ -4,6 +4,9 @@
         openMenuBtn: document.querySelector('[data-menu-open]'),
         closeMenuBtn: document.querySelector('[data-menu-close]'),
         menu: document.querySelector('[data-menu]'),
+        linkOrder: document.querySelector("[data-link-order]"),
+        linkAbout: document.querySelector("[data-link-about]"),
+        linkResults: document.querySelector("[data-link-results]"),
     };
     refs.openMenuBtn.addEventListener('click', toggleMenu);
     refs.closeMenuBtn.addEventListener('click', toggleMenu);
@@ -84,3 +87,34 @@ function zero_first_format(value){
         return day+"."+month+"."+year;
     }
 document.querySelector('.form-data').innerHTML = date_time();
+
+// -------------------------------smooth scroll------------------------------------------------
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+    
+    const blockID = anchor.getAttribute('href').substr(1)
+    
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}
+
+// -------------------------------scroll to top------------------------------------------------
+const scrollBtn = document.querySelector('.scroll-top-btn');
+
+window.onscroll = () => {
+    if (window.scrollY > 700) {
+        scrollBtn.classList.remove('show-btn_hide');
+    } else if (window.scrollY < 700) {
+        scrollBtn.classList.add('show-btn_hide');
+    }
+}
+
+scrollBtn.onclick = () => {
+    window.scrollTo(0, 0);
+}

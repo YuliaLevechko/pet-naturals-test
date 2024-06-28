@@ -16,6 +16,7 @@
     --placeholder: #777777;
     --data-color: #444444;
     --input-color: #F3EFEF;
+    --scroll-bg-btn: #ffffff42;
     --bg-blue-gradient: linear-gradient(180deg,
         #e1edf8 0%,
         rgba(127, 179, 225, 0) 59.38%,
@@ -375,9 +376,8 @@
 /* ---------------------------manufacturer section---------------------------- */
 .manufacturer {
     background-image: url(../images/paws.webp);
+    background-color: #ffffff;
     background-size: contain;
-    /* background-position: center;
-    background-repeat: no-repeat; */
     padding: 60px 0 61px;
 }
 .manufacturer-container {
@@ -439,6 +439,83 @@
     font-size: 18px;
     line-height: 1.1;
     text-align: center;
+}
+
+/* --------------------------------uses section-------------------------------- */
+.uses {
+    background: var(--bg-blue-gradient), url(../images/grass.webp);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+.uses-title {
+    font-size: 24px;
+    line-height: 1.1;
+    text-align: center;
+    color: var(--green);
+    margin-bottom: 25px;
+}
+
+.uses-info-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.uses-text-block {
+    background: url(../images/icons/rectagle-mobile.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 20px 40px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.uses-descr {
+    font-size: 14px;
+    line-height: 1.1;
+    text-align: left;
+}
+.uses-photo{
+    width: 70%;
+}
+
+/* -------------------------------scroll to top------------------------------------- */
+.scroll-top-btn {
+    position: fixed;
+    z-index: 2;
+    right: 10px;
+    bottom: 50px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50px;
+}
+
+.scroll-top-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    background-color: var(--scroll-bg-btn);
+}
+
+.show-btn {
+    opacity: 1;
+    transition: 1s;
+}
+.show-btn_hide {
+    opacity: 0;
+    transition: 1s;
+}
+
+.scroll-top-icon:hover,
+.scroll-top-icon:focus {
+    box-shadow: 2px 4px 5px 0px #00000040;
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
 }
 
 /* ------------------------------------MEDIA---------------------------------- */
@@ -514,6 +591,34 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 45px;
+    }
+    .uses {
+        background-size: contain;
+    }
+    .uses-info-block {
+        flex-direction: row;
+    }
+    .uses-text-block {
+        background: url(../images/icons/rectangle-2.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 490px;
+        padding-right: 50px;
+    }
+    .uses-title {
+        font-size: 36px;
+    }
+    .uses-photo {
+        width: 25%;
+    }
+    .scroll-top-btn {
+        right: 15px;
+        bottom: 40px;
+    }
+
+    .scroll-top-icon {
+        width: 55px;
+        height: 55px;
     }
 }
 
@@ -608,5 +713,38 @@
     .manufacturer-list {
         flex-wrap: nowrap;
         gap: 84px;
+    }
+    .uses {
+        padding-top: 99px;
+        padding-bottom: 197px;
+    }
+    .uses-info-block {
+        justify-content: center;
+        gap: 28px;
+    }
+    .uses-text-block {
+        width: 760px;
+        height: 354px;
+        padding: 40px 98px 41px 40px;
+        justify-content: space-between;
+    }
+    .uses-title {
+        font-size: 52px;
+    }
+    .uses-descr {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+    .uses-photo {
+        width: 300px;
+    }
+    .scroll-top-btn {
+        right: 40px;
+        bottom: 40px;
+    }
+
+    .scroll-top-icon {
+        width: 65px;
+        height: 65px;
     }
 }
