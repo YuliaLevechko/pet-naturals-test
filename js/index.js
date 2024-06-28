@@ -10,9 +10,18 @@
     };
     refs.openMenuBtn.addEventListener('click', toggleMenu);
     refs.closeMenuBtn.addEventListener('click', toggleMenu);
+  
+    refs.linkOrder.addEventListener('click', closeMenuOnClick);
+    refs.linkAbout.addEventListener('click', closeMenuOnClick);
+    refs.linkResults.addEventListener('click', closeMenuOnClick);
+  
     function toggleMenu() {
         refs.menu.classList.toggle('is-hidden');
         document.body.classList.toggle('no-scroll');
+    }
+    function closeMenuOnClick() {
+        refs.menu.classList.add('is-hidden');
+        document.body.classList.remove('no-scroll');
     }
 })();
 
@@ -116,5 +125,5 @@ window.onscroll = () => {
 }
 
 scrollBtn.onclick = () => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
