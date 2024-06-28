@@ -41,14 +41,19 @@
             </li>
           </ul>
         </nav>
-        <button type="button" data-menu-open class="menu-open">
+        <button type="button" id="menuOpen" data-menu-open class="menu-open">
           <svg class="menu-icon">
             <use href="./images/symbol-defs.svg#icon-mob-menu"></use>
           </svg>
         </button>
         <div class="mob-menu is-hidden" data-menu>
           <div>
-            <button type="button" data-menu-close class="menu-close-btn">
+            <button
+              type="button"
+              id="menuClose"
+              data-menu-close
+              class="menu-close-btn"
+            >
               <svg class="menu-close">
                 <use href="./images/symbol-defs.svg#icon-x-mob-modal"></use>
               </svg>
@@ -134,7 +139,9 @@
                     title="Формат: +38(0XX)XXX-XX-XX"
                     required
                   />
-                  <button type="submit" class="form-btn">ORDER</button>
+                  <button type="submit" id="orderButton" class="form-btn">
+                    ORDER
+                  </button>
                 </div>
                 <p class="data-title">
                   Order date:
@@ -233,7 +240,7 @@
           </div>
         </div>
       </section>
-      <button class="scroll-top-btn show-btn_hide">
+      <button id="scrollTop" class="scroll-top-btn show-btn_hide">
         <img
           src="./images/icons/arrow-up.svg"
           class="scroll-top-icon"
